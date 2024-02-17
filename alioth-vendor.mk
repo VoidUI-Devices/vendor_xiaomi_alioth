@@ -17,6 +17,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/alioth/proprietary/vendor/bin/init.qti.chg_policy.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.chg_policy.sh \
     vendor/xiaomi/alioth/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
     vendor/xiaomi/alioth/proprietary/vendor/bin/sscrpcd:$(TARGET_COPY_OUT_VENDOR)/bin/sscrpcd \
+    vendor/xiaomi/alioth/proprietary/vendor/bin/vib_cal:$(TARGET_COPY_OUT_VENDOR)/bin/vib_cal \
     vendor/xiaomi/alioth/proprietary/vendor/camera/model/model_front.dlc:$(TARGET_COPY_OUT_VENDOR)/camera/model/model_front.dlc \
     vendor/xiaomi/alioth/proprietary/vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb \
     vendor/xiaomi/alioth/proprietary/vendor/etc/acdbdata/Forte/Forte_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Forte/Forte_General_cal.acdb \
@@ -148,6 +149,164 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-tgame.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-tgame.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-video.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-video.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermald-devices.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald-devices.conf \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/0_click_P_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/0_click_P_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/101_offlineCountdown_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/101_offlineCountdown_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/102_sceneBombInjury_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/102_sceneBombInjury_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/103_sceneBomb_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/103_sceneBomb_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/104_doorOpen_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/104_doorOpen_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/106_sceneStep_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/106_sceneStep_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/107_crawl_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/107_crawl_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/108_scopeOn_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/108_scopeOn_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/109_scopeOff_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/109_scopeOff_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/10_ringTone4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/10_ringTone4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/110_magazineQuick_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/110_magazineQuick_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/111_grenade_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/111_grenade_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/112_sceneGetshot_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/112_sceneGetshot_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/113_grenadeExplosion_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/113_grenadeExplosion_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/114_punch_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/114_punch_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/115_pan_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/115_pan_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/116_bandage_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/116_bandage_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/118_sceneJump_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/118_sceneJump_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/119_vehiclePlane_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/119_vehiclePlane_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/11_ringTone4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/11_ringTone4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/120_sceneOpenparachute_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/120_sceneOpenparachute_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/121_sceneCloseparachute_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/121_sceneCloseparachute_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/122_vehicleCollision_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/122_vehicleCollision_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/123_vehicleBuggy_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/123_vehicleBuggy_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/124_vehicleDacia_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/124_vehicleDacia_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/125_vehicleMoto_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/125_vehicleMoto_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/126_firearmsAkm_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/126_firearmsAkm_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/127_firearmsM16a4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/127_firearmsM16a4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/128_firearmsAwm_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/128_firearmsAwm_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/12_ringTone4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/12_ringTone4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/130_firearmsMini14_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/130_firearmsMini14_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/131_firearmsVss_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/131_firearmsVss_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/132_firearmsQbz_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/132_firearmsQbz_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/133_firearmsUmp9_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/133_firearmsUmp9_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/134_firearmsDp28_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/134_firearmsDp28_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/135_firearmsS1897_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/135_firearmsS1897_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/137_firearmsP18c_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/137_firearmsP18c_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/13_ringTone4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/13_ringTone4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/140_cfmKillOne_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/140_cfmKillOne_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/141_cfmHeadshot_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/141_cfmHeadshot_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/142_cfmMultiKill_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/142_cfmMultiKill_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/143_cfmKillOneStrong_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/143_cfmKillOneStrong_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/144_cfmHeadshotStrong_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/144_cfmHeadshotStrong_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/145_cfmMultiKillStrong_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/145_cfmMultiKillStrong_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/146_cfmWeaponGrenadeExplode_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/146_cfmWeaponGrenadeExplode_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/147_cfmWeaponGrenadeKillOne_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/147_cfmWeaponGrenadeKillOne_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/148_cfmImpactFleshNormal_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/148_cfmImpactFleshNormal_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/149_cfmWeaponC4Installed_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/149_cfmWeaponC4Installed_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/14_ringTone4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/14_ringTone4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/150_cfmHeroAppear_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/150_cfmHeroAppear_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/151_cfmUIRewardOpenBox_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/151_cfmUIRewardOpenBox_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/152_cfmUIRewardTask_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/152_cfmUIRewardTask_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/153_cfmWeaponBLTShoot_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/153_cfmWeaponBLTShoot_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/154_Atlantis_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/154_Atlantis_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/155_DigitalUniverse_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/155_DigitalUniverse_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/156_Reveries_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/156_Reveries_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/157_fodMotionTriang_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/157_fodMotionTriang_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/158_fodMotionFlare_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/158_fodMotionFlare_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/159_fodMotionRipple_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/159_fodMotionRipple_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/15_ringTone4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/15_ringTone4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/160_fodMotionSpiral_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/160_fodMotionSpiral_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/161_gameboxLaunch_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/161_gameboxLaunch_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/162_GestureBackPull_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/162_GestureBackPull_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/163_GestureBackRelease_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/163_GestureBackRelease_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/164_alert_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/164_alert_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/165_feedbackNegativeLight_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/165_feedbackNegativeLight_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/166_feedbackNeutral_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/166_feedbackNeutral_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/167_feedbackPositive_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/167_feedbackPositive_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/168_fingerprintRecord_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/168_fingerprintRecord_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/169_lockdown_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/169_lockdown_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/16_ringTone4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/16_ringTone4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/171_todoAlldone_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/171_todoAlldone_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/172_uninstallAnimationIcon_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/172_uninstallAnimationIcon_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/17_ringTone4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/17_ringTone4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/18_ringTone4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/18_ringTone4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/192_hapticsVideo_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/192_hapticsVideo_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/19_ringTone4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/19_ringTone4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/1_doubelClick_P_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/1_doubelClick_P_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/20_ringTone4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/20_ringTone4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/23_Candy_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/23_Candy_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/24_Carousel_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/24_Carousel_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/25_Celesta_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/25_Celesta_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/26_Childhood_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/26_Childhood_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/27_Country_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/27_Country_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/28_Cowboy_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/28_Cowboy_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/2_tick_P_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/2_tick_P_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/30_Fairyland_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/30_Fairyland_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/31_Fantasy_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/31_Fantasy_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/32_FieldTrip_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/32_FieldTrip_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/33_Glee_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/33_Glee_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/35_IceLatte_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/35_IceLatte_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/36_KungFu_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/36_KungFu_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/38_Lollipop_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/38_Lollipop_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/39_MiMix2_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/39_MiMix2_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/3_thud_P_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/3_thud_P_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/40_Mi_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/40_Mi_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/41_MiHouse_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/41_MiHouse_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/42_MiJazz_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/42_MiJazz_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/43_MiRemix_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/43_MiRemix_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/44_MountainSpring_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/44_MountainSpring_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/45_Orange_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/45_Orange_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/46_WindChime_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/46_WindChime_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/47_SpaceAge_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/47_SpaceAge_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/48_ToyRobot_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/48_ToyRobot_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/49_Vigor_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/49_Vigor_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/4_pop_P_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/4_pop_P_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/50_Bottle_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/50_Bottle_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/51_Bubble_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/51_Bubble_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/521_AcousticGuitar_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/521_AcousticGuitar_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/52_Bullfrog_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/52_Bullfrog_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/53_Burst_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/53_Burst_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/54_Chirp_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/54_Chirp_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/55_Clank_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/55_Clank_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/56_Crystal_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/56_Crystal_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/57_FadeIn_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/57_FadeIn_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/58_FadeOut_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/58_FadeOut_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/59_Flute_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/59_Flute_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/5_heavyClick_P_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/5_heavyClick_P_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/60_Fresh_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/60_Fresh_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/61_Frog_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/61_Frog_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/62_Guitar_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/62_Guitar_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/63_Harp_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/63_Harp_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/64_IncomingMessage_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/64_IncomingMessage_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/65_MessageSent_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/65_MessageSent_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/66_Moment_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/66_Moment_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/67_NotificationXylophone_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/67_NotificationXylophone_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/68_Potion_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/68_Potion_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/69_Radar_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/69_Radar_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/6_ringTone1_P_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/6_ringTone1_P_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/70_Spring_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/70_Spring_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/71_Swoosh_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/71_Swoosh_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/72_GestureUpSlide_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/72_GestureUpSlide_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/73_fodMotionPlanet_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/73_fodMotionPlanet_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/74_ChargeWire_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/74_ChargeWire_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/75_ChargeWireless_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/75_ChargeWireless_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/76_UnlockFailed_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/76_UnlockFailed_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/77_fodMotion1_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/77_fodMotion1_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/78_fodMotion2_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/78_fodMotion2_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/79_fodMotion3_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/79_fodMotion3_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/7_ringTone2_P_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/7_ringTone2_P_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/80_fodMotion4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/80_fodMotion4_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/81_fodMotionAurora_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/81_fodMotionAurora_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/82_FaceIDWrong2_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/82_FaceIDWrong2_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/83_uninstallAnimation_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/83_uninstallAnimation_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/84_uninstallDialog_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/84_uninstallDialog_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/85_screenshot_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/85_screenshot_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/86_lockscreenCameraEntry_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/86_lockscreenCameraEntry_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/87_launcherEdit_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/87_launcherEdit_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/88_launcherIconSelection_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/88_launcherIconSelection_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/8_ringTone3_P_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/8_ringTone3_P_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/90_taskCleanAll_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/90_taskCleanAll_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/91_newIconFolder_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/91_newIconFolder_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/92_notificationRemove_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/92_notificationRemove_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/93_notificationCleanall_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/93_notificationCleanall_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/96_nfcCard_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/96_nfcCard_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/98_nfcCardSlow_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/98_nfcCardSlow_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/99_POCO_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/99_POCO_RTP.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/firmware/9_ringTone4_P_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/9_ringTone4_P_RTP.bin \
     vendor/xiaomi/alioth/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
     vendor/xiaomi/alioth/proprietary/vendor/firmware/aw8697_haptic.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw8697_haptic.bin \
     vendor/xiaomi/alioth/proprietary/vendor/firmware/aw8697_rtp_1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw8697_rtp_1.bin \
@@ -378,6 +537,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/alioth/proprietary/vendor/lib64/libSNPE.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSNPE.so \
     vendor/xiaomi/alioth/proprietary/vendor/lib64/libSuperSensor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSuperSensor.so \
     vendor/xiaomi/alioth/proprietary/vendor/lib64/libSuperSensorCPU.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSuperSensorCPU.so \
+    vendor/xiaomi/alioth/proprietary/vendor/lib64/libaachaptics.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaachaptics.so \
     vendor/xiaomi/alioth/proprietary/vendor/lib64/libalAILDC.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalAILDC.so \
     vendor/xiaomi/alioth/proprietary/vendor/lib64/libalCFR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalCFR.so \
     vendor/xiaomi/alioth/proprietary/vendor/lib64/libalLDC.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalLDC.so \
